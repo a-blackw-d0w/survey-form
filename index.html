@@ -5,8 +5,151 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Survey Form</title>
+    <style>
+      body {
+        background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmedia.istockphoto.com%2Fvectors%2Fseamless-pattern-with-sketched-burger-french-fries-and-milk-shake-vector-id493786254&f=1&nofb=1");
+        color: #ff8c00;
+        font-family: Arial, Helvetica, sans-serif;
+        padding-left: 20%;
+        padding-right: 20%;
+      }
+      label {
+        font-size: 18px;
+        display: block;
+        padding-bottom: 10px;
+      }
+      input,
+      textarea,
+      select {
+        display: block;
+        width: 100%;
+        padding-bottom: 20px;
+      }
+
+      form {
+        background-color: #696969;
+        border: 1px solid black;
+        padding: 40px 40px 40px 40px;
+      }
+
+      #button-area {
+        float: left;
+        width: 50%;
+        height: 50%;
+      }
+
+      input[type="checkbox"]:not(old) + label,
+      input[type="radio"]:not(old) + label {
+        display: inline-block;
+        margin-left: -28px;
+        padding-left: 28px;
+      }
+
+      h1 {
+        font-size: 42px;
+        text-align: center;
+      }
+
+      p {
+        font-size: 32px;
+        text-align: center;
+      }
+
+      h1,
+      p {
+        font-weight: bold;
+      }
+
+      #submit {
+        display: block;
+        width: 100%;
+        padding: 0.75rem;
+        background-color: #32cd32;
+        border-radius: 2px;
+        cursor: pointer;
+      }
+    </style>
   </head>
   <body>
-    <h1 id="main">Freecodecamp Survey Form</h1>
+    <h1 id="title">Spicy Burger Survey</h1>
+    <p id="description">
+      Thank you for taking the time to help us improve our menu.
+    </p>
+    <form id="survey-form" action="">
+      <img
+        src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fcdn.foodbeast.com%2Fcontent%2Fuploads%2F2015%2F05%2Fburger-header.jpg&f=1&nofb=1"
+        alt="Burger"
+      />
+      <label id="name-label">Name:</label>
+      <input
+        type="text"
+        name="name"
+        id="name"
+        placeholder="Enter your name"
+        required
+      />
+      <br />
+      <label id="email-label">Email:</label>
+      <input
+        type="email"
+        name="email"
+        id="email"
+        placeholder="Enter your Email"
+        required
+      />
+      <br />
+      <label id="number-label">Age(optional)</label>
+      <input
+        type="number"
+        name="number"
+        id="number"
+        min="0"
+        max="100"
+        placeholder="#"
+        required
+      />
+      <br />
+      <div>
+        <label id="gender-label">Gender:</label>
+        <input type="radio" name="gender" value="male" />Male<br />
+        <input type="radio" name="gender" value="female" />Female<br />
+        <input type="radio" name="gender" value="other" />Other<br />
+      </div>
+      <br />
+      <div class="form-group">
+        <p>Select Favorite Sauce</p>
+        <select id="dropdown" name="role" class="form-control" required>
+          <option disabled selected value>Options</option>
+          <option value="bbq">BBQ</option>
+          <option value="chilli">Chilli</option>
+          <option value="ketchup">Ketchup</option>
+          <option value="mayonnaise">Mayonnaise</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+      <br />
+      <label>Bread:</label><br />
+      <input type="checkbox" id="vehicle1" name="bread" value="whitebread" />
+      <label for="vehicle1">White</label><br />
+      <input type="checkbox" id="vehicle2" name="bread2" value="wheatbread" />
+      <label for="vehicle2">Wheat</label><br />
+      <input
+        type="checkbox"
+        id="vehicle3"
+        name="bread3"
+        value="sourdoughbread"
+      />
+      <label for="vehicle3">Sour Dough</label><br /><br />
+
+      <textarea
+        name=""
+        id=""
+        cols="50"
+        rows="10"
+        placeholder="Leave your comments here"
+      ></textarea>
+      <input type="submit" value="Submit" id="submit" /> <br />
+    </form>
   </body>
+  <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 </html>
